@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porto_Que</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+      color: #333;
+    }
+    header {
+      background-image: url(1.JPG);
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 4rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+    main {
+      max-width: 1200px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 4rem;
+      padding: 2rem;
+    }
+    .about {
+      background: #f0f4ff;
+    }
+    .projects {
+      background: #fff4f4;
+    }
+    .skills {
+      background: #f4fff5;
+    }
+    .contact {
+      background: #fef9e7;
+    }
+    h2 {
+      border-left: 6px solid #4b6cb7;
+      padding-left: 1rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+    .project-item, .skill-item {
+      background: #fff;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      border-left: 5px solid #4b6cb7;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .project-item:hover, .skill-item:hover {
+      transform: translateY(-3px);
+    }
+    .project-item img, .skill-item img, .about img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    .contact form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 600px;
+    }
+    .contact label {
+      font-weight: bold;
+    }
+    .contact input, .contact textarea {
+      padding: 0.75rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .contact button {
+      padding: 0.75rem;
+      background: #4b6cb7;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact button:hover {
+      background: #35477d;
+    }
+    footer {
+      background: #182848;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4b6cb7;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      display: none;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Porto_Que</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about" id="about">
+      <h2>Tentang Saya</h2>
+      <img src="5.JPG" alt="Tentang Saya">
+      <p>Saya adalah editor di suatu Instansi Pesantren yang mencangkup kebutuhan sosial media seperti Gambar, Video, dan sebagainya.</p>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>Proyek</h2>
+      <div class="project-item">
+        <img src="3.JPG" alt="Aplikasi Tugas Harian">
+        <h3>Grafis, Video Editor, dan Live Streaming Sosial Media.</h3>
+        <p>Mencangkup Kebutuhan Sosial Media seperti Instagram, Youtube, dan sebagainya. Juga menyediakan kebutuhan jasa seperti Foto Outdoor juga Video Dokumentasi (Cinematic).</p>
+      </div>
+      <div class="project-item">
+        <img src="2.JPG" alt="Website Toko Online">
+        <h3>Alat Tempur</h3>
+        <p>Bisa dengan standart kebutuhan Professional seperti kamera atau standart sosial media seperti Handphone dll.</p>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2>Bidang Tambahan</h2>
+      <div class="skill-item">
+        <img src="5.JPG" alt="HTML CSS JavaScript">
+        Live Streaming Sosial Media 
+      </div>
+      <div class="skill-item">
+        <img src="https://via.placeholder.com/600x200?text=React+Node+Express" alt="">
+        Mudarris Ilmu Alat Setingkat 'Aula dan Tawassut'
+      </div>
+      <div class="skill-item">
+        <img src="https://via.placeholder.com/600x200?text=MongoDB+MySQL" alt="">
+        Mudarris Fiqh Syafi'i Setingkat Aula
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Kontak Saya</h2>
+      <form onsubmit="submitForm(event)">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Porto Que</p>
+  </footer>
+
+  <button class="scroll-top" onclick="scrollToTop()">⬆️</button>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollBtn = document.querySelector('.scroll-top');
+      if (window.scrollY > 300) {
+        scrollBtn.style.display = 'block';
+      } else {
+        scrollBtn.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      alert(`Terima kasih, ${name}! Pesan Anda telah terkirim.`);
+      document.querySelector('form').reset();
+    }
+  </script>
+</body>
+</html>
